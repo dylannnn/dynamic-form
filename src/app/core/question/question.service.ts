@@ -17,16 +17,16 @@ export class QuestionService {
     const $questions = [
       {
         value: '',
-        key: 'My question one.',
+        key: 'question1',
         label: 'My question one label',
         required: true,
         order: 4,
         controlElement: 'input',
-        controlType: 'textbox'
+        controlType: 'text',
       },
       {
         value: '',
-        key: 'My question two.',
+        key: 'question2',
         label: 'My question two label',
         required: false,
         order: 2,
@@ -35,7 +35,7 @@ export class QuestionService {
       },
       {
         value: '',
-        key: 'My question three.',
+        key: 'question3',
         label: 'My question three label',
         required: false,
         order: 3,
@@ -49,7 +49,7 @@ export class QuestionService {
       },
       {
         value: '',
-        key: 'My question four.',
+        key: 'question4',
         label: 'My question four label',
         required: false,
         order: 1,
@@ -77,7 +77,6 @@ export class QuestionService {
           return questions.push(new TextboxQuestion(result));
       }
     });
-    console.log('Questions: ', $questions);
 
     console.log('Final question: ', questions);
     return questions.sort((a, b) => a.order - b.order);
